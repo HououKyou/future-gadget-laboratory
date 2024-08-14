@@ -5,113 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Okabe Rintarou - Mad Scientist</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
         body {
-            font-family: 'Orbitron', sans-serif;
-            background-color: #1e0034;
-            color: #e3acff;
+            font-family: 'VT323', monospace;
+            background-color: #000;
+            color: #00FF00;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
         }
+
         header {
-            background-color: #2b0030;
+            background-color: #000;
             padding: 2em 0;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
+
         header h1 {
             margin: 0;
             font-size: 3em;
-            letter-spacing: 2px;
-            color: #ffffff;
+            color: #00FF00;
         }
+
         header p {
             margin: 0.5em 0 0;
             font-size: 1.2em;
-            color: #ffccff;
+            color: #00FF00;
         }
+
         nav {
             display: flex;
             justify-content: center;
-            background-color: #390048;
+            background-color: #000;
             padding: 1em 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
+
         nav a {
-            color: #ffccff;
+            color: #00FF00;
             text-decoration: none;
             margin: 0 1.5em;
             font-size: 1.2em;
-            transition: color 0.3s ease;
         }
+
         nav a:hover {
-            color: #ffffff;
+            color: #FFFFFF;
         }
+
         section {
             padding: 4em 2em;
             text-align: center;
         }
+
         .about-me, .skills, .contact {
-            background-color: #2b0030;
+            background-color: #000;
             margin: 2em 0;
             padding: 2em;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #00FF00;
         }
-        .about-me:hover, .skills:hover, .contact:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-        }
+
         footer {
-            background-color: #2b0030;
+            background-color: #000;
             text-align: center;
             padding: 2em 0;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+            border-top: 1px solid #00FF00;
         }
+
         footer p {
             margin: 0;
-            color: #ffccff;
+            color: #00FF00;
         }
+
         ul {
             list-style: none;
             padding: 0;
         }
+
         ul li {
             padding: 0.5em 0;
             font-size: 1.2em;
         }
+
         a {
-            color: #ffccff;
+            color: #00FF00;
             text-decoration: none;
         }
+
         a:hover {
-            color: #ffffff;
+            color: #FFFFFF;
         }
+
         iframe {
-            border: 0;
+            border: 1px solid #00FF00;
             width: 100%;
             max-width: 600px;
             height: 300px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            margin-top: 1em;
         }
+
         .map-container {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
         }
+
         .portrait {
             display: block;
             margin: 0 auto 1em;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            border: 1px solid #00FF00;
         }
     </style>
 </head>
@@ -136,7 +143,7 @@
 
 <section id="about-me" class="about-me">
     <h2>About Me</h2>
-    <img src="file:///mnt/data/1540002229984_orig.png" alt="Okabe Rintarou" class="portrait" width="200">
+    <img src="https://example.com/your-image-url.png" alt="Okabe Rintarou" class="portrait" width="200">
     <p>I am Okabe Rintarou, a self-proclaimed mad scientist with a passion for invention and discovery. My adventures in the world of science and technology have led me to uncover many fascinating secrets. Join me as I continue to push the boundaries of what is possible!</p>
 </section>
 
@@ -165,7 +172,7 @@
 </footer>
 
 <audio id="background-music" loop>
-    <source src="file:///mnt/data/okabe_music.mp3" type="audio/mpeg">
+    <source src="https://example.com/your-audio-url.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
 
