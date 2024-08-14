@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okabe Rintarou - Mad Scientist</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #1e0034;
+            color: #e3acff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #2b0030;
+            padding: 2em 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+        header p {
+            margin: 0.5em 0 0;
+            font-size: 1.2em;
+            color: #ffccff;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #390048;
+            padding: 1em 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        nav a {
+            color: #ffccff;
+            text-decoration: none;
+            margin: 0 1.5em;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
+        section {
+            padding: 4em 2em;
+            text-align: center;
+        }
+        .about-me, .skills, .contact {
+            background-color: #2b0030;
+            margin: 2em 0;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .about-me:hover, .skills:hover, .contact:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+        }
+        footer {
+            background-color: #2b0030;
+            text-align: center;
+            padding: 2em 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+        }
+        footer p {
+            margin: 0;
+            color: #ffccff;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 0.5em 0;
+            font-size: 1.2em;
+        }
+        a {
+            color: #ffccff;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ffffff;
+        }
+        iframe {
+            border: 0;
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .map-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .portrait {
+            display: block;
+            margin: 0 auto 1em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Okabe Rintarou</h1>
+    <p>I AM MAD SCIENTIST, SO COOL! SONUVABITCH!</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about-me">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>Home</h2>
+    <p>Welcome to my personal webpage. Here you will find information about my skills, projects, and how to contact me.</p>
+</section>
+
+<section id="about-me" class="about-me">
+    <h2>About Me</h2>
+    <img src="file:///mnt/data/1540002229984_orig.png" alt="Okabe Rintarou" class="portrait" width="200">
+    <p>I am Okabe Rintarou, a self-proclaimed mad scientist with a passion for invention and discovery. My adventures in the world of science and technology have led me to uncover many fascinating secrets. Join me as I continue to push the boundaries of what is possible!</p>
+</section>
+
+<section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>Invention and Innovation</li>
+        <li>Time Travel Theories</li>
+        <li>Gadget Development</li>
+        <li>Scientific Research</li>
+        <li>Problem Solving</li>
+    </ul>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>If you wish to get in touch with me, please reach out via email at: <a href="mailto:okabe@example.com">okabe@example.com</a></p>
+    <div class="map-container">
+        <p>Here is our location, which is the Future Gadget Lab:</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.8681241546587!2d139.76856991528245!3d35.70206858018911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c0f489c6f7d%3A0x8a53b9f45c5f925b!2s3-ch%C5%8Dme-6%20Sotokanda%2C%20Chiyoda%20City%2C%20Tokyo%20101-0021%2C%20Japan!5e0!3m2!1sen!2sus!4v1594303035327!5m2!1sen!2sus" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Okabe Rintarou. All rights reserved.</p>
+</footer>
+
+<audio id="background-music" loop>
+    <source src="file:///mnt/data/okabe_music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var music = document.getElementById('background-music');
+        var playMusic = function () {
+            music.play();
+        };
+        document.body.addEventListener('click', playMusic, { once: true });
+    });
+</script>
+
+</body>
+</html>
