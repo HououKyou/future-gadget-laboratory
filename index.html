@@ -38,6 +38,7 @@
         nav {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap; /* Ensure navigation items wrap on smaller screens */
             margin: 2em 0;
         }
 
@@ -46,6 +47,7 @@
             text-decoration: none;
             margin: 0 1.5em;
             font-size: 1.5em; /* Increased font size */
+            padding: 0.5em 0; /* Add padding for better touch usability */
         }
 
         section {
@@ -53,6 +55,8 @@
             max-width: 800px;
             margin: 0 auto;
             background-color: rgba(0, 0, 0, 0.8); /* Adds a semi-transparent background to sections for readability */
+            width: 100%; /* Make sure the section width is responsive */
+            box-sizing: border-box; /* Include padding in width calculation */
         }
 
         section h2 {
@@ -76,11 +80,97 @@
             margin: 0 auto 1em;
             border-radius: 10px;
             border: 2px solid #00FF00;
+            width: 80%; /* Make the portrait responsive */
+            max-width: 200px; /* Maximum width for large screens */
             width: 200px;
         }
 
         iframe {
             border: 2px solid #00FF00;
+            width: 100%; /* Ensure the iframe scales to the container */
+            height: auto;
+        }
+
+        /* Chatbot widget styling */
+        #chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            max-width: 80%; /* Ensure chatbot fits on small screens */
+            background-color: #000;
+            border: 2px solid #00FF00;
+            border-radius: 10px;
+            overflow: hidden;
+            display: none;
+            z-index: 1000;
+        }
+
+        #chatbot-header {
+            background-color: #00FF00;
+            color: #000;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        #chatbot-body {
+            padding: 10px;
+            color: #00FF00;
+            font-size: 1em;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        #chatbot-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #000;
+            color: #00FF00;
+            font-size: 1em;
+            border-top: 1px solid #00FF00;
+        }
+
+        #chatbot-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #00FF00;
+            color: #000;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Media Queries for Mobile Optimization */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+
+            nav a {
+                font-size: 1.2em;
+                margin: 0.5em;
+            }
+
+            section h2 {
+                font-size: 2em;
+            }
+
+            ul li {
+                font-size: 1.2em;
+            }
+
+            footer {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
@@ -134,6 +224,18 @@
         Your browser does not support the audio element.
     </audio>
 
+    <!-- Chatbot widget -->
+    <div id="chatbot">
+        <div id="chatbot-header">Future Gadget Lab Chatbot</div>
+        <div id="chatbot-body">
+            <p>Hello! How can I assist you today?</p>
+        </div>
+        <input type="text" id="chatbot-input" placeholder="Type a message...">
+    </div>
+
+    <!-- Chatbot toggle button -->
+    <div id="chatbot-toggle">...</div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var music = document.getElementById('background-music');
@@ -141,6 +243,41 @@
                 music.play();
             };
             document.body.addEventListener('click', playMusic, { once: true });
+        });
+
+        // Chatbot toggle script
+        var chatbot = document.getElementById('chatbot');
+        var chatbotToggle = document.getElementById('chatbot-toggle');
+
+        chatbotToggle.addEventListener('click', function () {
+            if (chatbot.style.display === 'none' || chatbot.style.display === '') {
+                chatbot.style.display = 'block';
+            } else {
+                chatbot.style.display = 'none';
+            }
+        });
+
+        // Chatbot interaction script
+        var chatbotInput = document.getElementById('chatbot-input');
+        var chatbotBody = document.getElementById('chatbot-body');
+
+        chatbotInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                var userInput = chatbotInput.value;
+                if (userInput) {
+                    var userMessage = document.createElement('p');
+                    userMessage.textContent = 'You: ' + userInput;
+                    chatbotBody.appendChild(userMessage);
+
+                    // Simulate bot response
+                    var botMessage = document.createElement('p');
+                    botMessage.textContent = 'Bot: This is a response from the Future Gadget Lab!';
+                    chatbotBody.appendChild(botMessage);
+
+                    chatbotInput.value = '';
+                    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+                }
+            }
         });
     </script>
 </body>
