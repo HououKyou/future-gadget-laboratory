@@ -1,4 +1,4 @@
-# Welcome to the Lab of Okabe Rintarou! 🚀🔬
+# Welcome to the Future Gadget Laboratory! 🚀🔬
 
 **Tagline:** "I AM MAD SCIENTIST, SO COOL! SONUVABITCH!"
 
@@ -29,6 +29,7 @@ Welcome, fellow time travelers, hackers, and seekers of the unknown! You have en
 ## Contributing
 
 Are you a fellow mad scientist or a curious observer? Contributions to this project are welcome! Whether it's enhancing the site's design, adding new content, or even theorizing new gadgets, your input could change the future—or the past!
+*Terms and condition apply and only trusted ally of Hououin Kyouma may contribute*
 
 ## License
 
